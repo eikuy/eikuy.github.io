@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY♡Grace - Portfolio | 農業の傍、Webクリエイター目指して勉強中</title>
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://＊＊＊＊＊/img/og-image.jpg">
+    <meta property="og:title" content="HAPPY♡Grace - Portfolio">
+    <meta property="og:description" content="農業の傍、Webクリエイター目指して勉強中。モノづくり、プログラミング、自然が好きな４０代２児の母。">
+    <meta property="og:url" content="https://＊＊＊＊＊">
+    <meta property="og:site_name" content="HAPPY♡Grace - Portfolio">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style_sub.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/about-me.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <!-- 背景の装飾 -->
+    <div class="background-shape shape1"></div>
+    <div class="background-shape shape2"></div>
+    <div class="background-shape shape3"></div>
+
+    <!-- 左側固定ナビゲーション -->
+    <nav class="side-nav">
+        <div class="float-container nav-container">
+            <a href="index.html#about" class="nav-link" title="About">
+                <img src="img/nav-icon/about.svg" alt="about">
+            </a>
+            <a href="index.html#works" class="nav-link" title="Works">
+                <img src="img/nav-icon/works.svg" alt="works">
+            </a>
+            <a href="index.html#contact" class="nav-link" title="Contact">
+                <img src="img/nav-icon/contact.svg" alt="contact">
+            </a>
+        </div>
+    </nav>
+    
+    <!-- トップへ戻る矢印ボタン -->
+    <a class="to-top-btn float-container" href="#"><div class="pagetop-arrow"></div></a>
+
+    <div class="main-content"> <!-- ナビゲーション分の余白 -->
+
+        <header class="subpage-header">
+            <!-- トップページへのリンクボタン兼ヘッダー背景 -->
+            <a class="header-top-page-link" href="index.html">
+                <!-- デスクトップ用SVG -->
+                <svg class="subpage-header-bottom-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" preserveAspectRatio="none" >
+                    <defs>
+                        <linearGradient id="blue-gradient" x1="1" y1="0" x2="0" y2="0">
+                            <stop offset="0%" stop-color="#4A628A"/>
+                            <stop offset="30%" stop-color="#7AB2D3"/>
+                            <stop offset="60%" stop-color="#B9E5E8"/>
+                            <stop offset="100%" stop-color="#DFF2EB"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- 背景カーブ（デスクトップ） -->
+                    <path d="M0,0 H1440 V70 Q1080,150 720,90 Q360,40 0,120 Z" fill="url(#blue-gradient)"/>
+                    <!-- テキスト用カーブ（デスクトップ） -->
+                    <path id="curve" fill="none" d="M0,120 Q360,40 720,90 Q1080,150 1440,70"/>
+                    <text class="curved-text">
+                        <textPath href="#curve" startOffset="75%">Portfolio.</textPath>
+                    </text>
+                </svg>
+                
+                <div class="logo-img-container">
+                    <img src="img/happy-grace-logo.svg" alt="happy-grace-logo" class="logo-img">
+                </div>
+                <!-- スマホ用SVG -->
+                <svg class="subpage-header-bottom-shape-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="blue-gradient-mobile" x1="1" y1="0" x2="0" y2="0">
+                            <stop offset="0%" stop-color="#4A628A"/>
+                            <stop offset="30%" stop-color="#7AB2D3"/>
+                            <stop offset="60%" stop-color="#B9E5E8"/>
+                            <stop offset="100%" stop-color="#DFF2EB"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- 背景カーブ（スマホ） -->
+                    <path d="M0,0 H1440 V60 Q720,100 0,60 Z" fill="url(#blue-gradient-mobile)"/>
+                    <!-- テキスト用カーブ（スマホ） -->
+                    <path id="curve-mobile" fill="none" d="M0,60 Q720,100 1440,60"/>
+                    
+                    <text class="curved-text mobile-text" alignment-baseline="middle" text-anchor="right" dy="-8">
+                        <textPath href="#curve-mobile" startOffset="80%">Portfolio.</textPath>
+                    </text>
+                </svg>
+            </a>
+        </header>
+
+        <main class="container">
+            <section id="about" class="section">
+                <h2 class="section-title fade-in">About Me</h2>
+                <p class="section-subtitle">私について</p>
+                <div class="about-grid fade-in">
+                    <div class="about-img-container">
+                        <img src="img/about.jpg" alt="About me" class="about-img">
+                    </div>
+                    <div>
+                        <p class="about-text">
+                            大学・大学院ではバイオインフォマティクスを専攻し、製薬企業で貼付剤の研究開発を10年、
+                            大学の研究支援員としてAIを使った創薬スクリーニング研究に3年携わりました。
+                        </p>
+                        <p class="about-text">
+                            現在は小規模で自営農業をしながら、Webクリエイターを目指して勉強中です。
+                        </p>
+                        <p class="about-text">
+                            製薬、農業とIT、異なる分野での経験を活かし、ユーザー視点での使いやすさとデザイン性を兼ね備えた
+                            Webサイトやアプリケーションの制作を目指しています。
+                        </p> 
+                    </div>
+                </div>
+            </section>
+            
+            <section id="experience" class="section">
+                <h2 class="section-title fade-in">Experience</h2>
+                <p class="section-subtitle fade-in">経歴</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-date">2008 - 2018</span>
+                        <div class="timeline-content">
+                            <h3>製薬企業の研究開発</h3>
+                            <p>貼付剤の製剤設計を担当</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2018 - 2020</span>
+                        <div class="timeline-content">
+                            <h3>大学の研究支援パート１</h3>
+                            <p>産学連携研究員として、pythonを用いたAI創薬研究に従事</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2020 - 2021</span>
+                        <div class="timeline-content">
+                            <h3>就農準備</h3>
+                            <p>職業訓練で野菜栽培の基礎を習得</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2021 -</span>
+                        <div class="timeline-content">
+                            <h3>自営農業開始</h3>
+                            <p>さつまいもの栽培・販売を開始</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2022 - 2024</span>
+                        <div class="timeline-content">
+                            <h3>大学の研究支援パート２</h3>
+                            <p>合成生物学の分野でpythonを使用してシミュレーション、画像処理、生成AIを用いた研究に従事</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="section">
+                <h2 class="section-title fade-in">Skills</h2>
+                <p class="section-subtitle fade-in">出来ること</p>
+                <div class="skills-grid">
+                    <div class="skill-item fade-in">
+                        <div class="tool-name">
+                            <img src="img/skills-icon/icons8-python-50.png" alt="Python" class="skill-icon"><h3>Python</h3>
+                        </div>
+                        <p class="content">Pythonを使用したデータ分析、tensorflowやpytorch等のライブラリを用いた機械学習の実装、openCVを用いた画像処理等を行った経験があります。</p>
+                    </div>
+                    <div class="skill-item fade-in">
+                        <div class="tool-name">
+                            <img src="img/skills-icon/icons8-コー__ド-50.png" alt="HTML/CSS" class="skill-icon"><h3>HTML/CSS</h3>
+                        </div>
+                        <p class="content">HTMLとCSSを使用した基本的なWebページのマークアップとスタイリングを行えます。</p>
+                    </div>
+                    <div class="skill-item fade-in">
+                        <div class="tool-name">
+                            <img src="img/skills-icon/icons8-javascript-50.png" alt="JavaScript" class="skill-icon"><h3>JavaScript</h3>
+                        </div>
+                        <p class="content">JavaScriptやjQueryを使用した簡単な動的なWebコンテンツの作成を行えます。</p>
+                    </div>
+                    <div class="skill-item fade-in">
+                        <div class="tool-name">
+                            <img src="img/skills-icon/icons8-adobe-illustrator-50.png" alt="Adobe Illustrator" class="skill-icon"><h3>Adobe Illustrator</h3>
+                        </div>
+                        <p class="content">Adobe Illustratorの基本操作、簡単なベクターグラフィックの作成が行えます。</p>
+                    </div>
+                    <div class="skill-item fade-in">
+                        <div class="tool-name">
+                            <img src="img/skills-icon/icons8-adobe-photoshop-50.png" alt="Adobe Photoshop" class="skill-icon"><h3>Adobe Photoshop</h3>
+                        </div>
+                        <p class="content">Adobe Photoshopの基本操作、簡単な画像編集が行えます。</p>
+                    </div>
+                    <div class="skill-item fade-in">
+                        <div class="tool-name">
+                            <img src="img/skills-icon/icons8-キャンバス-50.png" alt="Canva" class="skill-icon"><h3>Canva</h3>
+                        </div>
+                        <p class="content">Canvaを使ってロゴ・チラシ等の制作が行えます。デザイン模写にも挑戦しています。</p>
+                    </div>
+                    <div class="skill-item fade-in">
+                        <div class="tool-name">
+                            <img src="img/skills-icon/icons8-エクセル-50.png" alt="Excel" class="skill-icon"><h3>Excel</h3>
+                        </div>
+                        <p class="content">Excelで表やグラフの作成、データ分析が行えます。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="hobby" class="section">
+                <h2 class="section-title fade-in">Hobby</h2>
+                <p class="section-subtitle">趣味</p>
+                <div class="hobby-grid">
+                    <div class="hobby-item fade-in">
+                        <div class="hobby-text-container">                            
+                            <h3 class="hobby-title">家庭菜園</h3>
+                            <p class="hobby-description">農業で行っているサツマイモの栽培に加えて自然栽培で季節の野菜を育てて家族で楽しんでいます。</p>
+                        </div>
+                        <img src="img/hobby-icon/plant.png" alt="家庭菜園" class="hobby-img">
+                    </div>
+                    <div class="hobby-item fade-in">
+                        <img src="img/hobby-icon/yoga.png" alt="ストレッチ・ヨガ" class="hobby-img">
+                        <div class="hobby-text-container">
+                            <h3 class="hobby-title">ストレッチ・ヨガ・バドミントン</h3>
+                            <p class="hobby-description">家族でストレッチとバドミントンクラブに参加して運動を楽しんでます。ヨガは呼吸とともに心を整える時間です。</p>
+                        </div>
+                    </div>
+                    <div class="hobby-item fade-in">
+                        <div class="hobby-text-container">
+                            <h3 class="hobby-title">ペットとお散歩</h3>
+                            <p class="hobby-description">愛犬と一緒にお散歩したりドックランで過ごす時間が癒しの一時です。</p>
+                        </div>
+                        <img src="img/hobby-icon/shibainu.png" alt="ペットとお散歩" class="hobby-img">
+                    </div>
+                    <div class="hobby-item fade-in">
+                        <img src="img/hobby-icon/english.png" alt="英会話" class="hobby-img">
+                        <div class="hobby-text-container">
+                            <h3 class="hobby-title">英会話</h3>
+                            <p class="hobby-description">英会話を独学で勉強中。近い将来息子が大好きな大谷翔平選手の試合を本拠地に観に行きたいです。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-site-link fade-in">
+                    <div class="triangle-bottom"></div>
+                    <h3>現在運用中のサイト</h3>
+                    <div class="triangle-bottom"></div>
+                    <ul class="link-list">
+                        <li><a class="arrow-btn-outline" href="https://www.mikifarm-wakamatsu.com" target="_blank" rel="noopener noreferrer">自社農園ミキファームのサイト</a></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <small><p>&copy; 2025 Happy Grace.</p></small>
+        </footer>
+        
+    </div>
+</body>
