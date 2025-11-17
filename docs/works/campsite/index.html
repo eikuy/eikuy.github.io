@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/scriptIndex.js" defer></script>
+    <title>星ノ宮ビレッジ</title>
+  </head>
+  <body class="topPage">
+    <div id="loading">
+      <div class="spinner">
+        <div class="loopingRhombusesSpinner">
+          <div class="rhombus"></div>
+          <div class="rhombus"></div>
+          <div class="rhombus"></div>
+        </div>
+      </div>
+    </div>
+    <header>
+        <div class="topContainer">
+          <img id="topImg" src="img/top_day.jpg" alt="星ノ宮ビレッジ昼の風景">
+          <div class="content">
+            <h1 class="titleText">星ノ宮<br>ビレッジ</h1>
+            <img src="img/star.png" alt="星のロゴ" class="titleLogo">
+            <!-- <span class="logo-text">ロゴテキスト</span> -->
+          </div>
+          <!-- <h1>星ノ宮<br>ビレッジ</h1> -->
+          <!-- <img src="img/star.png" alt="星のロゴ" class="logo"> -->
+          <button id="topBtn">夜の部へ移動</button>
+        </div>
+        <nav class="gMenu">
+            <input class="menu-btn" type="checkbox" id="menu-btn">
+            <label class="menu-icon" for="menu-btn">
+              <span class="navicon"></span>
+              <span class="navicon"></span>
+              <span class="navicon"></span>
+            </label>
+            <ul class="menu">
+              <li><a href="index.html">home</a></li>
+              <li><a href="concept.html">concept</a></li>
+              <li><a href="info.html">infomation</a></li>
+              <li><a href="reserve.html">reserve</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+      <ul class="linkList">
+          <li>
+            <a href="concept.html">
+              <img src="img/concept.jpg" alt="">
+              <span>CONCEPT</span>
+            </a>
+          </li>
+          <li>
+            <a href="info.html">
+              <img src="img/info.jpg" alt="">
+              <span>INFORMATION</span>
+            </a>
+          </li>
+          <li>
+            <a href="reserve.html">
+              <img src="img/reserve.jpg" alt="">
+              <span>RESERVE</span>
+            </a>
+          </li>
+      </ul>
+    </main>
+  </body>
+</html>

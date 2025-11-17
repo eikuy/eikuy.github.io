@@ -1,0 +1,450 @@
+@charset "utf-8";
+/* 全体の背景や文字設定 */
+body{
+    background-image: url(../images/bg_mizutama.png);
+    font-size: 16px;
+    font-family: 'arial','Hiragino Sans','Meiryo', sans-serif;
+    color: #333333;
+    letter-spacing: 0.05em;
+}
+/*  ヘッダー  */
+header{
+    width: 1240px;
+    margin: 0 auto 44px;
+}
+h1{
+   text-align: center;
+   padding: 20px 0 16px;
+}
+/*  ナビゲーション  */
+header nav ul{
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid #7c5d48;
+    border-bottom: 2px solid #7c5d48;
+    background-color: rgba(255, 255, 255, 0.42);
+    padding: 12px 0px 10px;
+}
+header nav ul li{
+    margin: 0 20px;
+}
+header nav ul li a{
+    font-size: 22px;
+    font-weight: bold;
+    color: #7c5d48;
+}
+header nav ul li a:hover{
+    text-decoration: underline double;
+}
+/*  2カラムレイアウト  */
+.container{
+    width: 1240px;
+    margin: 0 auto 50px;
+    display: flex;
+    justify-content: space-between;
+}
+main{
+    flex-basis: 920px;
+    border: dashed 5px bisque;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 62px 72px 32px 72px;
+}
+aside{
+    flex-basis: 284px;
+}
+/*  サイドナビ  */
+aside nav{
+    border-radius: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+    padding: 24px 28px;
+    margin-bottom: 24px;
+}
+aside nav h2{
+    margin-bottom: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #7c5d48;
+    /* background-image: url(../images/hone.png); */
+    padding: 10px 0px 10px 40px;
+    /* background-repeat: no-repeat; */
+    /* background-position: left bottom; */
+    position: relative;
+    overflow: visible;
+}
+
+
+/* hone画像を疑似要素で配置して回転アニメを適用 */
+aside nav h2::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 36px;
+    height: 36px;
+    background-image: url(../images/hone.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform-origin: 50% 50%;
+    /* 初期は少し回転＆透過しておく */
+    transform: rotate(-360deg) scale(0.9);
+    opacity: 0;
+    transition: transform 0.7s cubic-bezier(.2,.8,.2,1), opacity 0.6s ease;
+}
+
+/* in-viewクラスが付いたらくるっと回転させる */
+aside nav h2.in-view::before{
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+}
+
+
+aside nav ul{
+    font-size: 14pt;
+}
+/*  カテゴリ・最近の投稿リスト  */
+.categoryNav ul li{
+    list-style-type: square;
+    color: #7c5d48;
+    margin: 0 0 16px 20px;
+}
+.categoryNav ul li a{
+    color: #333333;
+}
+.recentNav ul li,
+.columnNav ul li{
+    border-bottom: 1px solid #7c5d48;
+    padding-bottom: 10px;
+    margin-bottom: 22px;
+}
+.recentNav ul, 
+.columnNav ul{
+    height: 240px;
+    overflow: hidden scroll;
+    overflow-x: hidden;
+    text-wrap: nowrap;
+}
+
+/*  ブログタイトル  */
+article h2{
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    background-image: url(../images/ashiato.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    padding: 20px 10px 10px 48px;
+    /* 初期は下にずらして透明にしておく */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(.2,.8,.2,1);
+}
+/* in-viewクラスが付いたらフェードイン */
+article h2.in-view{
+    opacity: 1;
+    transform: translateY(0);
+}
+/* このブログについて */
+.siteIntro{
+    margin-bottom: 50px;
+    padding: 20px;
+    background-image: url(../images/bg_craft.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    border-radius: 16px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+}
+.siteIntro h2{
+    font-size: 22px;
+    color: #7c5d48;
+    font-weight: bold;
+    padding: 0 0 10px;
+}
+.siteIntro p{
+    font-size: 16px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+/*  日付・投稿記事  */
+time{
+    background-color: chocolate;
+    border-radius: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 13px 20px 12px 15px;
+    display: inline-block;
+}
+.postdate{
+    margin-bottom: 10px;
+}
+.articleContent{
+    line-height: 1.8;
+    margin-bottom: 26px;
+    border-bottom: 5px solid bisque;
+	border-bottom-style: dashed;
+}
+/*  記事内リンク  */
+.articleContent .linkClass a{
+    color: skyblue;
+    font-weight: bold;
+}
+.articleContent .linkClass a:hover{
+    text-decoration: underline;
+}
+/*  インスタサムネイル画像  */
+.articleContent img{
+    /* imgタグはインライン要素のままで上下方向のmarginが効く */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+.articleContent a img:hover {
+  opacity: 0.8;
+  box-shadow: 0 0 8px #7c5d48;
+  transition: 0.3s;
+}
+/*  波模様のアンダーライン作成  */
+.wave{
+    margin-bottom: 5px;
+    display: inline-block;
+    background-image: url(../images/bg_wave.png);
+    background-repeat: repeat;
+    background-position: left bottom;
+}
+/*  アンダーライン強調  */
+.under {
+  background: linear-gradient(transparent 50%, yellow 50%);
+}
+.under .em {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.articleContent em{
+    /* 下に余白をつけるため */
+    display: inline-block;
+    margin-bottom: 20px;
+}
+/*  フッター  */
+footer{
+    background-color: #523f2e;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 10px 20px;
+}
+
+/* 他のSNSリンクを追加する場合は、以下追加 */
+/* .footer-menu-list{
+    display: flex;
+    justify-content: center;
+}
+.footer-menu-list li{
+    margin: 26px;
+}  */
+  
+/*  ページトップボタン  */
+html {
+    scroll-behavior: smooth;
+}
+/* .pagetop {
+    height: 55px;
+    width: 55px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: url(../images/arrow_top.png) no-repeat center center;
+    border: solid 2px #7c5d48;
+    border-radius: 50%;
+}
+.pagetop:hover {
+    box-shadow: 0 0 8px #7c5d48;
+    transition: box-shadow 0.3s;
+} */
+
+.pagetop {
+    height: 55px;
+    width: 55px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    /* 矢印作成 */
+    background-color: #ffffff;
+    border: solid 2px #7c5d48;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: box-shadow 0.25s, transform 0.18s;
+}
+
+/* 上向き矢印（三角＋軸）を ::before と ::after で作る */
+.pagetop::before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 14px solid #7c5d48; /* 矢印の三角部分 */
+    transform: translateY(-2px);
+    display: block;
+}
+
+.pagetop:hover {
+    box-shadow: 0 6px 18px rgba(124,93,72,0.28);
+    transform: translateY(-4px);
+}
+
+/* 初期で隠すためのクラス（JSで付与） */
+main > article.is-hidden {
+  display: none;
+}
+
+/* もっと見るボタンとアーカイブリンク */
+.more-area {
+  text-align: center;
+  margin: 28px 0;
+}
+.btn-more {
+  background-color: #7c5d48;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.18s, transform 0.12s;
+}
+.btn-more:hover { background-color: #6b4b39; transform: translateY(-2px); }
+
+
+/* スマホ時の調整 */
+@media screen and (max-width: 768px) {
+  .more-area { flex-direction: column; gap: 8px; padding: 0 12px; }
+  .btn-more { width: 100%; }
+  .older-link { display: inline-block; }
+}
+
+
+/* --- スマホ対応のメディアクエリ --- */
+@media screen and (max-width: 768px) {
+  /* 基本の幅調整 */
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html, body {
+    font-size: 15px;
+  }
+
+  /* ヘッダー */
+  header {
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 0 16px;
+  }
+  h1 { padding: 12px 0; }
+  h1 img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+
+  /* ナビゲーションを縦並びに */
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0;
+  }
+  header nav ul li { margin: 8px 0; }
+  header nav ul li a { font-size: 18px; }
+
+  /* コンテナを縦積みに */
+  .container {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto 30px;
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  main {
+    flex-basis: auto;
+    padding: 28px 18px;
+    border-width: 3px;
+  }
+  aside { flex-basis: auto; }
+
+  /* サイドナビ（内側の余白縮小） */
+  aside nav {
+    padding: 16px;
+  }
+  aside nav h2 {
+    font-size: 18px;
+    padding-left: 44px;
+  }
+
+  /* hone 疑似要素を小さくし位置調整 */
+  aside nav h2::before {
+    width: 28px;
+    height: 28px;
+    left: 6px;
+    bottom: 6px;
+    background-size: contain;
+  }
+
+  /* siteIntro */
+  .siteIntro { padding: 14px; }
+
+  /* 最近の投稿の高さ調整 */
+  .recentNav ul { height: 160px; }
+
+  /* 記事見出し */
+  article h2 {
+    font-size: 20px;
+    padding: 16px 8px 8px 44px;
+    margin-bottom: 12px;
+    /* アニメーションはそのまま動作 */
+  }
+
+  /* 記事内容の余白・画像 */
+  .articleContent { padding-bottom: 18px; }
+  .articleContent img { margin-top: 12px; }
+
+  /* ページトップボタン */
+  /* .pagetop {
+    width: 44px;
+    height: 44px;
+    right: 16px;
+    bottom: 16px;
+  } */
+  .pagetop {
+    width: 44px;
+    height: 44px;
+    right: 16px;
+    bottom: 16px;
+    background-color: #ffffff;
+    border: solid 2px #7c5d48;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pagetop::before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 10px solid #7c5d48;
+    transform: translateY(-1px);
+  }
+  /* もっと見るボタンとアーカイブリンク */
+  .more-area { flex-direction: column; gap: 8px; padding: 0 12px; }
+  .btn-more { width: 100%; }
+ 
+  /* フッター */
+  footer { padding: 12px 8px; }
+}
+
+/* 大きな表示幅で中央揃え維持 */
+@media screen and (min-width: 1240px) {
+  .container, header { max-width: 1240px; margin-left: auto; margin-right: auto; }
+}

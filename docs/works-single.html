@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY♡Grace - Portfolio | 農業の傍、Webクリエイター目指して勉強中</title>
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://＊＊＊＊＊/img/og-image.jpg">
+    <meta property="og:title" content="HAPPY♡Grace - Portfolio">
+    <meta property="og:description" content="農業の傍、Webクリエイター目指して勉強中。モノづくり、プログラミング、自然が好きな４０代２児の母。">
+    <meta property="og:url" content="https://＊＊＊＊＊">
+    <meta property="og:site_name" content="HAPPY♡Grace - Portfolio">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style_sub.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/works-lists.js"></script>
+    <script src="js/works-single.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <!-- 背景の装飾 -->
+    <div class="background-shape shape1"></div>
+    <div class="background-shape shape2"></div>
+    <div class="background-shape shape3"></div>
+
+    <!-- 左側固定ナビゲーション -->
+    <nav class="side-nav">
+        <div class="float-container nav-container">
+            <a href="index.html#about" class="nav-link" title="About">
+                <img src="img/nav-icon/about.svg" alt="about">
+            </a>
+            <a href="index.html#works" class="nav-link" title="Works">
+                <img src="img/nav-icon/works.svg" alt="works">
+            </a>
+            <a href="index.html#contact" class="nav-link" title="Contact">
+                <img src="img/nav-icon/contact.svg" alt="contact">
+            </a>
+        </div>
+    </nav>
+    
+    <!-- トップへ戻る矢印ボタン -->
+    <a class="to-top-btn float-container" href="#"><div class="pagetop-arrow"></div></a>
+
+    <div class="main-content"> <!-- ナビゲーション分の余白 -->
+
+        <header class="subpage-header">
+            <!-- トップページへのリンクボタン兼ヘッダー背景 -->
+            <a class="header-top-page-link" href="index.html">
+                <!-- デスクトップ用SVG -->
+                <svg class="subpage-header-bottom-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160" preserveAspectRatio="none">
+                    <defs>
+                        <linearGradient id="blue-gradient" x1="1" y1="0" x2="0" y2="0">
+                            <stop offset="0%" stop-color="#4A628A"/>
+                            <stop offset="30%" stop-color="#7AB2D3"/>
+                            <stop offset="60%" stop-color="#B9E5E8"/>
+                            <stop offset="100%" stop-color="#DFF2EB"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- 背景カーブ（デスクトップ） -->
+                    <path d="M0,0 H1440 V70 Q1080,150 720,90 Q360,40 0,120 Z" fill="url(#blue-gradient)"/>
+                    <!-- テキスト用カーブ（デスクトップ） -->
+                    <path id="curve" fill="none" d="M0,120 Q360,40 720,90 Q1080,150 1440,70"/>
+                    <text class="curved-text">
+                        <textPath href="#curve" startOffset="75%">Portfolio.</textPath>
+                    </text>
+                </svg>
+                <div class="logo-img-container">
+                    <img src="img/happy-grace-logo.svg" alt="happy-grace-logo" class="logo-img">
+                </div>
+                <!-- スマホ用SVG -->
+                <svg class="subpage-header-bottom-shape-mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="blue-gradient-mobile" x1="1" y1="0" x2="0" y2="0">
+                            <stop offset="0%" stop-color="#4A628A"/>
+                            <stop offset="30%" stop-color="#7AB2D3"/>
+                            <stop offset="60%" stop-color="#B9E5E8"/>
+                            <stop offset="100%" stop-color="#DFF2EB"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- 背景カーブ（スマホ） -->
+                    <path d="M0,0 H1440 V60 Q720,100 0,60 Z" fill="url(#blue-gradient-mobile)"/>
+                    <!-- テキスト用カーブ（スマホ） -->
+                    <path id="curve-mobile" fill="none" d="M0,60 Q720,100 1440,60"/>
+                    <text class="curved-text mobile-text" alignment-baseline="middle" text-anchor="right" dy="-8">
+                        <textPath href="#curve-mobile" startOffset="80%">Portfolio.</textPath>
+                    </text>
+                </svg>
+            </a>
+        </header>
+        
+
+        <main class="container">
+            <!-- Worksセクション -->
+            <section id="works-single-top" class="section">
+                <div class="work-flex">
+                    <!-- Work 概要 -->
+                    <div class="work-item fade-in">
+                        <!-- JavaScriptで生成 -->
+                    </div>
+                </div>
+            </section>
+            <!-- Work Image -->
+            <section id="work-image" class="section">
+                <h2 class="section-title fade-in">Work Image</h2>
+                <p class="section-subtitle fade-in">完成図</p>
+                <div class="work-img-flex">
+                    <!-- JavaScriptで生成 -->
+                </div>
+            </section>
+            <!-- Next Workへのリンク -->
+            <section id="work-next" class="next-work-section">
+                <a href="works-single.html" class="next-work-link">
+                    <div class="next-work-container">
+                        <div class="next-work-text">next work</div>
+                        <div class="next-work-title">
+                                <!-- JavaScriptで生成 -->
+                        </div>
+                    </div>
+                </a>
+                <!-- All Works一覧 -->
+                <div class="more-btn-l hover-link">
+                    <a href="./works.html">
+                        <p>To All Works</p>
+                        <img src="img/location-arrow-solid.svg" alt="click arrow">
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <small><p>&copy; 2025 Happy Grace.</p></small>
+        </footer>
+    </div>
+</body>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/scriptReserve.js" defer></script>
+    <title>RESERVE | 星ノ宮ビレッジ</title>
+  </head>
+  <body class="subPage">
+    <header>
+      <h1>
+        <span>RESERVE</span>
+      </h1>
+        <nav class="gMenu">
+            <input class="menu-btn" type="checkbox" id="menu-btn">
+            <label class="menu-icon" for="menu-btn">
+              <span class="navicon"></span>
+              <span class="navicon"></span>
+              <span class="navicon"></span>
+            </label>
+            <ul class="menu">
+              <li><a href="index.html">home</a></li>
+              <li><a href="concept.html">concept</a></li>
+              <li><a href="info.html">infomation</a></li>
+              <li><a href="reserve.html">reserve</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p class="photo">
+          <img class="colorFadeIn" src="img/reserve_page.jpg" alt="">
+        </p>
+        <form id="reserveForm">
+          <p class="required">
+              <label for="userName">お名前</label>
+              <input type="text" name="userName"  required>
+              <span id="userName"></span>
+          </p>
+          <p class="required">           
+              <label for="gender">性別
+                  <input type="radio" name="gender" value="男">男
+                  <input type="radio" name="gender" value="女">女
+                  <input type="radio" name="gender" value="その他">その他
+              </label>
+              <span id="gender"></span>
+          </p>
+          <p class="required">
+              <label for="email">メールアドレス</label>
+              <input type="email" name="email"  required>
+              <span id="email"></span>
+          </p>
+          <p class="required">
+              <label for="postCode">郵便番号</label>
+              <input type="text" name="postCode"  required>
+              <span id="postCode"></span>
+          </p>
+          <p class="required">
+              <label for="adress">住所</label>
+              <input type="text" name="adress"  required>
+              <span id="adress"></span>
+          </p>
+          <p class="required">
+              <label for="phone">電話番号</label>
+              <input type="tel" name="phone"  required>
+              <span id="phone"></span>
+          </p>
+          <p class="required">
+              <label for="number">人数</label>
+              <input type="text" name="number" required>
+              <span id="number"></span>
+          </p>
+          <p class="required">
+              <label for="date">予約日</label>
+              <input type="date" name="date" value="" required>
+              <span id="date"></span>
+          </p>
+          <p>
+              <label for="rental">レンタル道具</label>
+              <div id="rentalTool">
+              </div>
+          </p>
+          <p>
+              <label for="note">備考</label>
+              <textarea id="text" name="note"></textarea>
+              <span id="count">0文字</span>
+              <span id="overCount" class="alert"></span>
+          </p>
+  
+          <div class="isAgree">
+              <label>
+                  <input id="check" type="checkbox">利用規約に同意して送信
+              </label>
+          </div>
+          <input id ="btn" type="button" value="送信">
+          <span id="sendMessage" style="color: crimson;"></span>
+        </form>
+    </main>
+    <footer>
+        <p>星ノ宮ビレッジ<img src="img/star.png" alt=""></p>
+    </footer>
+  </body>
+</html>
