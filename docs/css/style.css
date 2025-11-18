@@ -200,13 +200,10 @@
     border-radius: 9999px;
 }
 .more-btn-s { 
-    padding: 0 20px;
-    /* margin: 20px; */
     margin-left: auto;
     margin-right: 6em;
     width: 100px;
     position: relative;
-    /* text-align: right; */
 }
 .more-btn-s a {
     font-weight: 700;
@@ -259,9 +256,9 @@
     justify-content: center;
     gap: 0.6rem;
     width: 92%;
-    max-width: 520px;
+    max-width: 500px;
     margin: 6rem auto 10rem auto;
-    padding: .6rem 2.6rem .6rem .9rem; /* 右側にアイコン用の余白を確保 */
+    padding: 0.7em 2.7em 0.7em 1.7em;
     border: 0.1rem solid var(--blue-3);
     background-color: var(--blue-1);
     border-radius: 9999px;
@@ -400,10 +397,6 @@ p.thank-you {
     width: 60%;
     height: auto;
 }
-.contact-description {
-    color: var(--mono-6);
-    margin-bottom: 2rem;
-}
 .contact-form > div { margin-bottom: 1.5rem; }
 .form-input, .form-textarea {
     width: 85%;
@@ -433,6 +426,7 @@ p.thank-you {
     background-color: var(--blue-4);
     transform: scale(1.05);
 }
+
 /* ----- PC版（768px以上）----- */
 @media (min-width: 768px) {
     .side-nav { padding: 2rem; }
@@ -451,7 +445,7 @@ p.thank-you {
         left: 10%;
     }
     .header-bottom-shape { bottom: -1px; /* 継ぎ目を消すための調整 */ }
-    .container_01 {
+    .scroll-down-container {
         justify-content: right;
         position: absolute;
         left: auto;
@@ -472,7 +466,7 @@ p.thank-you {
     .works-grid .work-item:nth-child(even) { grid-template-areas: "image content"; }/* 偶数は画像→テキスト */
     .about-wrap { grid-template-columns: 1fr 2fr; max-width: 56rem; margin: 0 auto; }
     #mask { display: block; }
-    .view-more-btn {
+    .more-btn-l {
         font-size: 2rem;
         padding: .7rem;
     }

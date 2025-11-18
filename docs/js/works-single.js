@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <dd>${(work.tools || []).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</dd>
         <dt>担当範囲</dt>
         <dd>${(work.myRole || []).map(r => `<span class="role">${escapeHtml(r)}</span>`).join('')}</dd>
-        ${work.additionalInfo ? `<dt>設計ポイント☜ </dt><dd>${escapeHtml(work.additionalInfo)}</dd>` : ''}
-        ${work.link ? `<dt>Link</dt><dd><a href="${escapeHtml(work.link)}" target="_blank">${escapeHtml(work.link)}</a></dd>` : ''}
+        ${work.designPoints ? `<dt>設計ポイント</dt><dd><ul class="design-points">${work.designPoints.map(dp => `<li>${escapeHtml(dp)}</li>`).join('')}</ul></dd>` : ''}
       </dl>
+      ${work.link ? `<div class="my-site-link"><a class="arrow-btn-outline" href="${escapeHtml(work.link)}" target="_blank">サイトを見る</a></div>` : ''}
     </div>
   `
     // 作品イメージの表示

@@ -112,7 +112,7 @@ section#works-single-top { margin-top: 7rem; }
 }
 .work-description {
     color: var(--mono-5);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     line-height: 1.75;
 }
 #all-works-link {
@@ -153,6 +153,24 @@ section#works-single-top { margin-top: 7rem; }
 }
 dl.works-single-content dd {
     margin: 1rem;
+}
+.design-points {
+  padding-left: 1.3rem;
+}
+.design-points li {
+  position: relative;
+  list-style-type: none;
+  padding-bottom: 0.2em;
+  margin-bottom: 5px;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+.design-points li::before {
+  content: '✓'; 
+  position: absolute;
+  left: -1.4em; 
+  color: var(--blue-3);
+  font-weight: bold;
 }
 .next-work-section {
     margin-bottom: 5rem;
@@ -227,9 +245,9 @@ dl.works-single-content dd {
     justify-content: center;
     gap: 0.6rem;
     width: 92%;
-    max-width: 520px;
+    max-width: 500px;
     margin: 6rem auto 10rem auto;
-    padding: .6rem 2.6rem .6rem .9rem; 
+    padding: 1em 3em 1em 2em;
     border: 0.1rem solid var(--blue-3);
     background-color: var(--blue-1);
     border-radius: 9999px;
@@ -429,6 +447,7 @@ section#about {
     /* 最小幅200pxで最大幅は均等に分割した幅で繰り返し */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-content: center;
+    margin-bottom: 4rem;
 }
 .skill-item {
     min-height: 100px;
@@ -481,8 +500,8 @@ section#about {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
-    width: 90%; /* itemの幅に収める */
-    max-width: none; /* 親のmax-width: 20rem; を解除 */
+    width: 90%; 
+    max-width: none; 
     padding: 1rem;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.75); 
@@ -501,6 +520,7 @@ section#about {
     font-size: 0.95rem;
     line-height: 1.6;
     color: var(--mono-7); 
+    text-align: left; 
 }
 .hobby-title::after {
     content: '';
@@ -515,7 +535,7 @@ section#about {
 }
 .my-site-link {
     text-align: center;
-    margin-top: 6rem;
+    margin: 4rem 0;
  }
 .my-site-link h3 { 
     margin-bottom: 2rem; 
@@ -549,13 +569,13 @@ section#about {
     background-position: 0 0; 
   }
 }
-/* 枠付きボタン＋右矢印 */
+/* サイトリンク、枠付きボタン */
 .arrow-btn-outline {
   position: relative; 
   border: 1px solid var(--mono-4); 
   color: var(--mono-4); 
   text-decoration: none;
-  padding: 8px 30px 8px 15px; 
+  padding: 1em 1.5em 1em 1em;
   display: inline-block; 
   text-align: center; 
   transition: background-color 0.2s linear,
@@ -584,6 +604,7 @@ section#about {
 .arrow-btn-outline:hover::before {
   right: -25px; /* ホバーで矢印を右に移動 */
 }
+
 /* ----- PC版（768px以上）----- */
 @media (min-width: 768px) {
     .logo-img { 
@@ -649,7 +670,9 @@ section#about {
     .timeline-item::before {
         top: 1rem;
     }
-    /* PCでは元のデザイン（横並び）に戻すためのリセット */
+    .hobby-title br {
+        display: none; 
+    }
     .hobby-item {
         display: flex; 
         position: relative; 
@@ -672,9 +695,9 @@ section#about {
         background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px); /* 縞模様の背景を復活 */
         background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
         text-align: left;
-        max-width: 30rem; /* 元の幅に戻す */
+        max-width: 30rem; 
     }
     .arrow-btn-outline {
-        padding: 8px 30px;
+      padding: 1em 3em 1em 2em;
     }
 }
